@@ -4,7 +4,7 @@ import seaborn as sns
 import numpy as np
 
 def plot_image_histogram(image_path):
-    image = Image.open(image_path).resize((256, 256))
+    image = Image.open(image_path)
     image = np.array(image)
     sns.set(style="whitegrid")
     plt.figure(figsize=(12, 8))
@@ -22,5 +22,5 @@ def plot_image_histogram(image_path):
 
 if __name__ ==  "__main__":
     # Change to the desired path.
-    image_path = '/home/yalouini/Documents/cv_insights/histogram_image.jpg'
+    image_path = '/home/yalouini/Documents/cv_insights/random_colors.png'
     plot_image_histogram(image_path)
